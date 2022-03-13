@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #141c2f;
+  --color-container: #2d3a5f;
+  --color-btn: #0079fe;
+  --color-white: #fff;
+
+  --ff-all: "Space Mono", monospace;
+
+  color: #ffb52c;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--color-white);
+  font-family: var(--ff-all);
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+header {
+  width: 80%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 70%;
+  padding: 2rem 4rem;
+}
+
+.container > *:not(:last-child):not(:first-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1030px) {
+  header {
+    width: 90%;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 32rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+}
+
+/*----------------------Styling nav---------------------------*/
+
+.container .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
+/*-----------------------Searchbox styling--------------------------------*/
+
+.container .search_box {
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-container);
+  border-radius: 10px;
+  height: 3.5rem;
+  padding: 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search_box.active {
+  background: #f4f4f4;
+}
+
+.container .search_box .input_box {
+  width: 80%;
+  padding: 0 1rem;
+}
+
+.container .search_box .input_box i {
+  font-size: 1.1rem;
+}
+
+.container .search_box .input_box input {
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  font-family: inherit;
+  padding: 0 1rem;
+  color: #fff;
+  border: none;
+}
+
+.input_box input:focus,
+.input_box input:visited {
+  outline: none;
+}
+
+.container .search_box .btn_search {
+  padding: 0 1.5rem;
+  border-radius: 7px;
+  font-family: inherit;
+  letter-spacing: 1.5px;
+  border: none;
+  background: var(--color-btn);
+  color: #fff;
+  cursor: pointer;
+}
+
+/*-----------------------User box styles--------------------------------*/
+
+.container .user_box {
+  display: flex;
+  padding: 2rem 2.5rem;
+  background: var(--color-container);
+  border-radius: 10px;
+  gap: 1rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.user_box.active {
+  background: #f4f4f4;
+}
+
+.container .user_box .img_box {
+  width: 22%;
+  position: relative;
+  z-index: 100;
+  display: grid;
+  padding-top: 0.8rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.img_box .image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.container .user_box .img_box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container .user_box .content_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content_box > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.content_box .user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_box .user_info .info_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_box .user_info .info_nav h3 {
+  font-size: 1rem;
+}
+
+.user_info a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-btn);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 500px) {
+  .container .user_box {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem .8rem;
+    gap: 1rem;
+  }
+
+  .container .user_box .img_box {
+    width: 90%;
+  }
+}
+
+/*------------------followings styling------------------------*/
+
+.content_box .user_followings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-bg);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+/*----------------user contact--------------------------------------*/
+
+.content_box .user_contact {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 500px) {
+    .content_box .user_contact {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+      
+}
+
+.user_contact .items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.items a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

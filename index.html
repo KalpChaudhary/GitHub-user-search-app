@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GitHub User Search App</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <h1>devfinder</h1>
+          <div class="mode"></div>
+        </div>
+        <div class="search_box">
+          <div class="input_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search GitHub Ussernames.."
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button class="btn_search">Search</button>
+        </div>
+        <div class="user_box">
+          <div class="img_box">
+              <div class="image">
+                  <img class="profileImg" src="images/github_logo.png" alt="GitHub_Logo" />
+              </div>
+          </div>
+          <div class="content_box">
+            <div class="user_info">
+              <div class="info_nav">
+                <h1>The Octocat</h1>
+                <h3>Joined 25 Jan 2011</h3>
+              </div>
+              <a href="#">@octocat</a>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia ratione laborum voluptates, provident et.</p>
+            </div>
+            <div class="user_followings">
+              <div class="repos">
+                <span>Repos</span>
+                <h1>8</h1>
+              </div>
+              <div class="followers">
+                <span>Followers</span>
+                <h1>3938</h1>
+              </div>
+              <div class="following">
+                <span>Following</span>
+                <h1>9</h1>
+              </div>
+            </div>
+            <div class="user_contact">
+              <div class="location items">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>San Francisco</h3>
+              </div>
+              <div class="twitter items">
+                <i class="fa-brands fa-twitter"></i>
+                <h3>Not Available</h3>
+              </div>
+              <div class="github_link items">
+                <i class="fa-solid fa-link"></i>
+                <h3>https://github.blog</h3>
+              </div>
+              <div class="github_office items">
+                <i class="fa-solid fa-building"></i>
+                <h3>@github</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"
+      integrity="sha512-CWKGqmXoxo+9RjazbVIaiFcD+bYEIcUbBHwEzPlT0FilQq3TCUac+/uxZ5KDmvYiXJvp32O8rcgchkYw6J6zOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
