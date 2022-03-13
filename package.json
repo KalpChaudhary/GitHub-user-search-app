@@ -2,7 +2,6 @@
   "name": "github_user_search_app",
   "version": "1.0.0",
   "description": "GitHub Username App",
-  "main": "app.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
